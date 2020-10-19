@@ -138,7 +138,7 @@ foreach ($data as $prodotto) {
   }
 }
 
-var_dump($cortissima);
+//var_dump($cortissima);
 
 @endphp
 
@@ -152,8 +152,44 @@ var_dump($cortissima);
   <body>
 
     <header>
-      img <script src="{{asset('img/logo.jpg')}}" charset="utf-8"></script>
+      <img src="{{asset('images/logo_lamolisana.png')}}" alt="logo La Molisana">
     </header>
+
+    <main>
+      <ul>
+        @if (count($lunga) > 0)
+          <h2>Le Lunghe</h2>
+          @foreach ($lunga as $prodotto)
+            <li>
+              {{ $prodotto['titolo'] }}
+            </li>
+          @endforeach
+        @endif
+      </ul>
+
+      <ul>
+        @if (count($corta) > 0)
+          <h2>Le Corte</h2>
+          @foreach ($corta as $prodotto)
+            <li>
+              {{ $prodotto['titolo'] }}
+            </li>
+          @endforeach
+        @endif
+      </ul>
+
+      <ul>
+        @if (count($cortissima) > 0)
+          <h2>Le Cortissime</h2>
+          @foreach ($cortissima as $prodotto)
+            <li>
+              {{ $prodotto['titolo'] }}
+            </li>
+          @endforeach
+        @endif
+      </ul>
+
+    </main>
 
   </body>
 </html>

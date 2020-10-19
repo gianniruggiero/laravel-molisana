@@ -147,49 +147,80 @@ foreach ($data as $prodotto) {
   <head>
     <meta charset="utf-8">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
 
     <header>
-      <img src="{{asset('images/logo_lamolisana.png')}}" alt="logo La Molisana">
+      <img class="header_logo" src="{{asset('images/logo_lamolisana.png')}}" alt="logo La Molisana">
+      <nav>
+        <ul class="ul-main-nav list-inline">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Prodotti</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+  
+      </nav>
     </header>
 
     <main>
-      <ul>
+      {{-- container --}}
+      <div class="container">
+        
+        {{-- sezione LE LUNGHE --}}
         @if (count($lunga) > 0)
-          <h2>Le Lunghe</h2>
-          @foreach ($lunga as $prodotto)
-            <li>
-              {{ $prodotto['titolo'] }}
-            </li>
-          @endforeach
+          <h2>LE LUNGHE</h2>
+          <div class="tipo-pasta">
+            @foreach ($lunga as $prodotto)
+              <div class="box">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+              </div>
+            @endforeach
+          </div>
         @endif
-      </ul>
 
-      <ul>
+        {{-- sezione LE CORTE --}}
         @if (count($corta) > 0)
-          <h2>Le Corte</h2>
-          @foreach ($corta as $prodotto)
-            <li>
-              {{ $prodotto['titolo'] }}
-            </li>
-          @endforeach
+          <h2>LE CORTE</h2>
+          <div class="tipo-pasta">
+            @foreach ($corta as $prodotto)
+              <div class="box">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+              </div>
+            @endforeach
+          </div>
         @endif
-      </ul>
 
-      <ul>
+        {{-- sezione LE CORTISSIME --}}
         @if (count($cortissima) > 0)
-          <h2>Le Cortissime</h2>
-          @foreach ($cortissima as $prodotto)
-            <li>
-              {{ $prodotto['titolo'] }}
-            </li>
-          @endforeach
+          <h2>LE CORTISSIME</h2>
+          <div class="tipo-pasta">
+            @foreach ($cortissima as $prodotto)
+              <div class="box">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+              </div>
+            @endforeach
+          </div>
         @endif
-      </ul>
 
+      </div>
+      {{-- /container --}}
     </main>
+    <footer>
+      <div class="container">
+        <div class="col-left">
+          <img class="footer_logo" src="{{asset('images/logo_lamolisana.png')}}" alt="logo La Molisana">
+          <p>Lorem ipsum dolor <br> sit amet, consectetur <br> adipisicing <br> elit <br> Doloribus laborum <br> cumque commodi, sunt <br> corporis magnam doloribus.</p>
+        </div>
+        <div class="col-center">
+          <p>Lorem, ipsum <br> Dolor sit <br> Amet consectetur <br> Adipisicing elit <br> Labore nisi <br> Pariatur ullam <br> Optio architecto <br>Fugiat! Quaerat</p>
+        </div>
+        <div class="col-right">
+          <p>Lorem ipsum <br> Dolor sit <br> Amet consectetur <br> Adipisicing <br> Elit Unde <br> Laudantium nobis nihil <br> Veniam et voluptatibus <br> Modi eius laboriosam <br></p>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>

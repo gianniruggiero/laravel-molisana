@@ -1,0 +1,14 @@
+footer {
+    background-color: white;
+    padding: 50px 0;
+    .container {
+        display: flex;
+        .col-left, .col-center, .col-right {
+            text-align: left;
+            width: calc(100% / 3);
+            img {
+                max-width: 100%;
+            };
+        }
+    }
+}

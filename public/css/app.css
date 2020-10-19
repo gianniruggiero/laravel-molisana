@@ -1,8 +1,108 @@
+/* titolo navbar header */
+
+/* titolo sezioni tipo di pasta*/
+
+/* testi footer */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.list-inline {
+  display: flex;
+  list-style: none;
+}
+
 header {
   background-color: white;
+  text-align: center;
+}
+
+header .header_logo {
+  margin: 20px 0px;
+}
+
+header .ul-main-nav {
+  font-size: 24px;
+  justify-content: center;
+}
+
+header .ul-main-nav li:nth-child(2) a {
+  background-color: #b3e5fc;
+}
+
+header .ul-main-nav li {
+  padding: 20px 20px;
+}
+
+header .ul-main-nav li a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
+header .ul-main-nav li a:hover {
+  background-color: #b3e5fc;
+}
+
+main {
+  padding: 50px 0px 30px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+main h2 {
+  font-size: 32px;
+  margin: 20px 10px;
+  color: #002d73;
+}
+
+main .tipo-pasta {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main .tipo-pasta .box {
+  width: calc((100% - 60px) / 3);
+  font-size: 0px;
+  margin: 10px;
+}
+
+main .tipo-pasta .box .pic {
+  width: 100%;
+}
+
+footer {
+  background-color: white;
+  padding: 50px 0;
+}
+
+footer .container {
+  display: flex;
+}
+
+footer .container .col-left,
+footer .container .col-center,
+footer .container .col-right {
+  text-align: left;
+  width: calc(100% / 3);
+}
+
+footer .container .col-left img,
+footer .container .col-center img,
+footer .container .col-right img {
+  max-width: 100%;
 }
 
 body {
-  background-color: grey;
+  background-color: #daedf3;
 }
 

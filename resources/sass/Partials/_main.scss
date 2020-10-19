@@ -1,0 +1,23 @@
+main {
+    padding: 50px 0px 30px 0;
+    font-family: 'Roboto', sans-serif;
+    h2 {
+        font-size: 32px;
+        margin: 20px 10px;
+        color: $color2;
+    }
+    .tipo-pasta {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .box {
+            width: calc((100% - 60px) / 3);
+            font-size: 0px;
+            margin: 10px;
+            .pic {
+                width: 100%;
+            }
+        }
+    }
+
+}

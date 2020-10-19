@@ -123,17 +123,22 @@
   ]';
 
 $data = json_decode($data, true);
-$tipo_pasta = [];
 
-/* individua i tipi di pasta presenti nel json */
+$lunga = [];
+$corta = [];
+$cortissima = [];
+
 foreach ($data as $prodotto) {
-  if (in_array($prodotto["tipo"], $tipo_pasta) == false) {
-    $tipo_pasta [] = $prodotto["tipo"];
+  if($prodotto["tipo"] == "lunga") {
+    $lunga[] = $prodotto;
+  } elseif ($prodotto["tipo"] == "corta") {
+    $corta[] = $prodotto;
+  } elseif ($prodotto["tipo"] == "cortissima") {
+    $cortissima[] = $prodotto;
   }
-};
+}
 
-//var_dump($tipo_pasta);
-//die();
+//var_dump($cortissima);
 
 @endphp
 
@@ -162,22 +167,46 @@ foreach ($data as $prodotto) {
     <main>
       {{-- container --}}
       <div class="container">
-        @for ($i = 0; $i < count($tipo_pasta); $i++)
-          <h2> {{strtoupper($tipo_pasta[$i])}} </h2>
+        
+        {{-- sezione LE LUNGHE --}}
+        @if (count($lunga) > 0)
+          <h2>LE LUNGHE</h2>
           <div class="tipo-pasta">
-            @foreach ($data as $prodotto)
-              @if ($prodotto['tipo'] == $tipo_pasta[$i])
+            @foreach ($lunga as $prodotto)
               <div class="box">
-                <img class="pic" src="{{$prodotto['src']}}" alt="tipo di pasta">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
               </div>
-              @endif
             @endforeach
-          </div>      
-        @endfor
+          </div>
+        @endif
+
+        {{-- sezione LE CORTE --}}
+        @if (count($corta) > 0)
+          <h2>LE CORTE</h2>
+          <div class="tipo-pasta">
+            @foreach ($corta as $prodotto)
+              <div class="box">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+              </div>
+            @endforeach
+          </div>
+        @endif
+
+        {{-- sezione LE CORTISSIME --}}
+        @if (count($cortissima) > 0)
+          <h2>LE CORTISSIME</h2>
+          <div class="tipo-pasta">
+            @foreach ($cortissima as $prodotto)
+              <div class="box">
+                <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+              </div>
+            @endforeach
+          </div>
+        @endif
+
       </div>
       {{-- /container --}}
     </main>
-    
     <footer>
       <div class="container">
         <div class="col-left">

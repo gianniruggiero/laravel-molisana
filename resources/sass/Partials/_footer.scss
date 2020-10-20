@@ -1,13 +1,40 @@
 footer {
     background-color: white;
+    background-image: url('/images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
     padding: 50px 0;
+    color: $color3;
+    h3 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    p {
+        line-height: 20px;
+        margin-top: 20px;
+    }
+    li {
+        padding: 8px 0;
+        a {
+            text-decoration: none;
+            color: $color3;
+        }
+    }
     .container {
         display: flex;
+        .col-center {
+            .nav-center-2 {
+                margin-bottom: 100px;
+
+            }
+        }
         .col-left, .col-center, .col-right {
             text-align: left;
             width: calc(100% / 3);
+            margin: 0 10px;
             img {
-                max-width: 100%;
+                max-width: 250px;
+                width: 100%
             };
         }
     }

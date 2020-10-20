@@ -17,3 +17,10 @@ body {
   display: flex;
   list-style: none;
 }
+
+.list-inline-vert {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  

@@ -1,9 +1,10 @@
 main {
     background-color: $bg_color1;
+    background-image: url('/images/main-bg.jpg');
     padding: 50px 0px 30px 0;
     h2 {
         font-size: 32px;
-        margin: 20px 10px;
+        margin: 20px 5px;
         color: $color2;
     }
     .tipo-pasta {
@@ -11,9 +12,9 @@ main {
         flex-wrap: wrap;
         width: 100%;
         .box {
-            width: calc((100% - 60px) / 3);
+            width: calc((100% - 30px) / 3);
             font-size: 0px;
-            margin: 10px;
+            margin: 5px;
             .pic {
                 width: 100%;
             }

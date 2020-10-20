@@ -24,6 +24,12 @@ body {
   list-style: none;
 }
 
+.list-inline-vert {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
 header {
   background-color: white;
   text-align: center;
@@ -59,12 +65,13 @@ header .ul-main-nav li a:hover {
 
 main {
   background-color: #daedf3;
+  background-image: url("/images/main-bg.jpg");
   padding: 50px 0px 30px 0;
 }
 
 main h2 {
   font-size: 32px;
-  margin: 20px 10px;
+  margin: 20px 5px;
   color: #002d73;
 }
 
@@ -75,9 +82,9 @@ main .tipo-pasta {
 }
 
 main .tipo-pasta .box {
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 30px) / 3);
   font-size: 0px;
-  margin: 10px;
+  margin: 5px;
 }
 
 main .tipo-pasta .box .pic {
@@ -86,11 +93,38 @@ main .tipo-pasta .box .pic {
 
 footer {
   background-color: white;
+  background-image: url("/images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
   padding: 50px 0;
+  color: #a6adb7;
+}
+
+footer h3 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+footer p {
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+footer li {
+  padding: 8px 0;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #a6adb7;
 }
 
 footer .container {
   display: flex;
+}
+
+footer .container .col-center .nav-center-2 {
+  margin-bottom: 100px;
 }
 
 footer .container .col-left,
@@ -98,11 +132,13 @@ footer .container .col-center,
 footer .container .col-right {
   text-align: left;
   width: calc(100% / 3);
+  margin: 0 10px;
 }
 
 footer .container .col-left img,
 footer .container .col-center img,
 footer .container .col-right img {
-  max-width: 100%;
+  max-width: 250px;
+  width: 100%;
 }
 

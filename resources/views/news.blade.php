@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('title')
-    La Molisana - Prodotti
+    La Molisana - News
 @endsection
 
 @section('mainContent')
-    <h1>Pagina Prodotti con il layout</h1>
+    <h1>Pagina News con il layout</h1>
 @endsection

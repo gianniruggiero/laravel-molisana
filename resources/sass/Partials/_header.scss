@@ -5,18 +5,19 @@ header {
         margin: 20px 0px;
         }
     .ul-main-nav {
-        font-size: 24px;
+        
         justify-content: center;
-        li:nth-child(2) a {
-            background-color:$bg_color2;
-        }
         li {
             padding: 20px 20px;
             a {
                 padding: 20px 20px;
                 text-decoration: none;
                 color: $color1;
+                font-size: 24px;
                 font-weight: 700;
+                &.active {
+                    background-color:$bg_color2;
+                }
                 &:hover {
                     background-color:$bg_color2;
 

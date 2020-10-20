@@ -34,12 +34,7 @@ header .header_logo {
 }
 
 header .ul-main-nav {
-  font-size: 24px;
   justify-content: center;
-}
-
-header .ul-main-nav li:nth-child(2) a {
-  background-color: #b3e5fc;
 }
 
 header .ul-main-nav li {
@@ -50,7 +45,12 @@ header .ul-main-nav li a {
   padding: 20px 20px;
   text-decoration: none;
   color: #000;
+  font-size: 24px;
   font-weight: 700;
+}
+
+header .ul-main-nav li a.active {
+  background-color: #b3e5fc;
 }
 
 header .ul-main-nav li a:hover {
@@ -58,8 +58,8 @@ header .ul-main-nav li a:hover {
 }
 
 main {
+  background-color: #daedf3;
   padding: 50px 0px 30px 0;
-  font-family: "Roboto", sans-serif;
 }
 
 main h2 {
@@ -104,9 +104,5 @@ footer .container .col-left img,
 footer .container .col-center img,
 footer .container .col-right img {
   max-width: 100%;
-}
-
-body {
-  background-color: #daedf3;
 }
 

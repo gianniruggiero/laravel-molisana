@@ -35,10 +35,6 @@ Route::get('/prodotti/show/{id}', function ($id) {
 })->where('id', '[0-9]+')->name('dettaglio-prodotto');
 
 
-
-
-
-
 Route::get('/prodotti', function () {
 
 // importa i dati dal db contenuto in config

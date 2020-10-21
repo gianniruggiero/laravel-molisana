@@ -26,81 +26,85 @@ foreach ($data as $key => $prodotto) {
 @endsection
 
 @section('mainContent')
-
-  {{-- sezione LE LUNGHE --}}
-  @if (!empty($lunga))
-    <h2>LE LUNGHE</h2>
-    <div class="tipo-pasta">
-      @foreach ($lunga as $prodotto)
-        <div class="box">
-          {{-- immagine del tipo di pasta  --}}
-          <img class="pic" src="{{ $prodotto['src'] }}" alt="">
-          {{-- livello overlay --}}
-          <div class="overlay">
-            {{-- wrapper titolo pasta e icona ristorante --}}
-            <div class="wrap-hover">
-              {{-- imposta la URL per il link alla pagina prodotto specifica --}}
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
-            </div>
-            {{-- /wrapper titolo pasta e icona ristorante --}}
-          </div>  
-          {{-- /livello overlay --}}
-        
-        </div>
-      @endforeach
-    </div>
-  @endif
-
-  {{-- sezione LE CORTE --}}
-  @if (!empty($corta))
-    <h2>LE CORTE</h2>
-    <div class="tipo-pasta">
-      @foreach ($corta as $prodotto)
-
-        <div class="box">
-          {{-- immagine del tipo di pasta  --}}
-          <img class="pic" src="{{ $prodotto['src'] }}" alt="">
-          {{-- livello overlay --}}
-          <div class="overlay">
-            {{-- wrapper titolo pasta e icona ristorante --}}
-            <div class="wrap-hover">
-              {{-- imposta la URL per il link alla pagina prodotto specifica --}}
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
-            </div>
-            {{-- /wrapper titolo pasta e icona ristorante --}}
-          </div>  
-          {{-- /livello overlay --}}
-        </div>
-      
+<div class="wrap-prodotti">
+  <div class="container">
+    {{-- sezione LE LUNGHE --}}
+    @if (!empty($lunga))
+      <h2>LE LUNGHE</h2>
+      <div class="tipo-pasta">
+        @foreach ($lunga as $prodotto)
+          <div class="box">
+            {{-- immagine del tipo di pasta  --}}
+            <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+            {{-- livello overlay --}}
+            <div class="overlay">
+              {{-- wrapper titolo pasta e icona ristorante --}}
+              <div class="wrap-hover">
+                {{-- imposta la URL per il link alla pagina prodotto specifica --}}
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
+              </div>
+              {{-- /wrapper titolo pasta e icona ristorante --}}
+            </div>  
+            {{-- /livello overlay --}}
+          
+          </div>
         @endforeach
-    </div>
-  @endif
+      </div>
+    @endif
 
-  {{-- sezione LE CORTISSIME --}}
-  @if (!empty($cortissima))
-    <h2>LE CORTISSIME</h2>
-    <div class="tipo-pasta">
-      @foreach ($cortissima as $prodotto)
-        <div class="box">
-          {{-- immagine del tipo di pasta  --}}
-          <img class="pic" src="{{ $prodotto['src'] }}" alt="">
-          {{-- livello overlay --}}
-          <div class="overlay">
-            {{-- wrapper titolo pasta e icona ristorante --}}
-            <div class="wrap-hover">
-              {{-- imposta la URL per il link alla pagina prodotto specifica --}}
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
-              <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
-            </div>
-            {{-- /wrapper titolo pasta e icona ristorante --}}
-          </div>  
-          {{-- /livello overlay --}}
-        </div>
-      @endforeach
-    </div>
-  @endif
+    {{-- sezione LE CORTE --}}
+    @if (!empty($corta))
+      <h2>LE CORTE</h2>
+      <div class="tipo-pasta">
+        @foreach ($corta as $prodotto)
+
+          <div class="box">
+            {{-- immagine del tipo di pasta  --}}
+            <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+            {{-- livello overlay --}}
+            <div class="overlay">
+              {{-- wrapper titolo pasta e icona ristorante --}}
+              <div class="wrap-hover">
+                {{-- imposta la URL per il link alla pagina prodotto specifica --}}
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
+              </div>
+              {{-- /wrapper titolo pasta e icona ristorante --}}
+            </div>  
+            {{-- /livello overlay --}}
+          </div>
+        
+          @endforeach
+      </div>
+    @endif
+
+    {{-- sezione LE CORTISSIME --}}
+    @if (!empty($cortissima))
+      <h2>LE CORTISSIME</h2>
+      <div class="tipo-pasta">
+        @foreach ($cortissima as $prodotto)
+          <div class="box">
+            {{-- immagine del tipo di pasta  --}}
+            <img class="pic" src="{{ $prodotto['src'] }}" alt="">
+            {{-- livello overlay --}}
+            <div class="overlay">
+              {{-- wrapper titolo pasta e icona ristorante --}}
+              <div class="wrap-hover">
+                {{-- imposta la URL per il link alla pagina prodotto specifica --}}
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
+                <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
+              </div>
+              {{-- /wrapper titolo pasta e icona ristorante --}}
+            </div>  
+            {{-- /livello overlay --}}
+          </div>
+        @endforeach
+      </div>
+    @endif
+  </div>
+</div>
+
 
 @endsection
 

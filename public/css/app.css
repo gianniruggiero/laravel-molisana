@@ -63,25 +63,25 @@ header .ul-main-nav li a:hover {
   background-color: #b3e5fc;
 }
 
-main {
+.wrap-prodotti {
   background-color: #daedf3;
   background-image: url("/images/main-bg.jpg");
   padding: 50px 0px 30px 0;
 }
 
-main h2 {
+.wrap-prodotti h2 {
   font-size: 32px;
   margin: 20px 5px;
   color: #002d73;
 }
 
-main .tipo-pasta {
+.wrap-prodotti .tipo-pasta {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-main .tipo-pasta .box {
+.wrap-prodotti .tipo-pasta .box {
   width: calc((100% - 30px) / 3);
   font-size: 0px;
   margin: 5px;
@@ -89,16 +89,16 @@ main .tipo-pasta .box {
   overflow: hidden;
 }
 
-main .tipo-pasta .box:hover .pic {
+.wrap-prodotti .tipo-pasta .box:hover .pic {
   transform: scale(1.4);
 }
 
-main .tipo-pasta .box .pic {
+.wrap-prodotti .tipo-pasta .box .pic {
   width: 100%;
   transition: 1s all;
 }
 
-main .tipo-pasta .box .overlay {
+.wrap-prodotti .tipo-pasta .box .overlay {
   background-color: rgba(0, 45, 115, 0);
   position: absolute;
   top: 0;
@@ -108,15 +108,15 @@ main .tipo-pasta .box .overlay {
   overflow: hidden;
 }
 
-main .tipo-pasta .box .overlay:hover {
+.wrap-prodotti .tipo-pasta .box .overlay:hover {
   background-color: rgba(0, 45, 115, 0.6);
 }
 
-main .tipo-pasta .box .overlay:hover .wrap-hover {
+.wrap-prodotti .tipo-pasta .box .overlay:hover .wrap-hover {
   display: block;
 }
 
-main .tipo-pasta .box .wrap-hover {
+.wrap-prodotti .tipo-pasta .box .wrap-hover {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,18 +129,18 @@ main .tipo-pasta .box .wrap-hover {
   display: none;
 }
 
-main .tipo-pasta .box .wrap-hover .ico-rist {
+.wrap-prodotti .tipo-pasta .box .wrap-hover .ico-rist {
   width: 15%;
   margin-top: 50px;
 }
 
-main .tipo-pasta .box .wrap-hover a {
+.wrap-prodotti .tipo-pasta .box .wrap-hover a {
   text-decoration: none;
   text-align: center;
   color: white;
 }
 
-main .tipo-pasta .box .wrap-hover a h3 {
+.wrap-prodotti .tipo-pasta .box .wrap-hover a h3 {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
@@ -195,5 +195,29 @@ footer .container .col-center img,
 footer .container .col-right img {
   max-width: 250px;
   width: 100%;
+}
+
+.single-prod {
+  background-color: #bbdbe6;
+  padding: 50px 0;
+}
+
+.single-prod h1 {
+  color: #002d73;
+  text-align: center;
+}
+
+.single-prod .wrap-img {
+  font-size: 0;
+}
+
+.single-prod .wrap-img .img-pasta-h,
+.single-prod .wrap-img .img-pasta-v {
+  width: 100%;
+}
+
+.single-prod .descrizione {
+  font-size: 24px;
+  color: #002d73;
 }
 

@@ -1,3 +1,9 @@
+// FONT AWESOME
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
 @import 'Partials/_variables';
 @import 'Partials/_common';
 @import 'Partials/_header';
@@ -5,3 +11,4 @@
 @import 'Partials/_footer';
 @import 'Partials/_prodotto-sing';
 @import 'Partials/_news';
+

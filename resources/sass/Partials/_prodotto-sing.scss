@@ -1,16 +1,30 @@
 .single-prod {
     background-color: $bg-color3;
     padding: 50px 0;
+    position: relative;
     .container {
         .hide {
             display: none;
         }
-        .wrap-arrows {
-            display: flex;
-            justify-content: space-between;
+        .prev-arrow {
+            left: 0;
         }
-        .jc_right {
-            justify-content: right;
+        .next-arrow {
+            right: 0;
+        }
+        .prev-arrow, .next-arrow {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            background-color:rgba($color: white, $alpha: 0.6);
+            i {
+                padding: 30px 10px;
+                font-size: 80px;
+                color: white;
+                &:hover {
+                    color:$color2;
+                }
+            }
         }
         h1 {
             color: $color2;

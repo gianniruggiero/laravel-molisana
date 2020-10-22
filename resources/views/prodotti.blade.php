@@ -21,8 +21,8 @@
                     {{-- wrapper titolo pasta e icona ristorante --}}
                     <div class="wrap-hover">
                     {{-- imposta la URL per il link alla pagina prodotto specifica --}}
-                    <a href="prodotti/show/{{ $prodotto['id'] }}"><h3>{{ $prodotto['titolo'] }}</h3></a>
-                    <a href="prodotti/show/{{ $prodotto['id'] }}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
+                    <a href="{{route('prodotto-singolo', $prodotto['id'])}}"><h3>{{ $prodotto['titolo'] }}</h3></a>
+                    <a href="{{route('prodotto-singolo', $prodotto['id'])}}"><img class="ico-rist" src="{{asset('images/ico-pasta.png')}}" alt="icona"></a>
                     </div>
                     {{-- /wrapper titolo pasta e icona ristorante --}}
                 </div>  

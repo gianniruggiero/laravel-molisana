@@ -13,26 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ROUTE PAGINA NEWS
+
 Route::get('/', function () {
    return view('home');
 })->name("home");
 
+
+// ROUTE PAGINA NEWS
 Route::get('/news', function () {
    return view('news');
 })->name("news");
 
-// ROTTA PER LA PAGINA DEL SINGOLO PRODOTTO
+
+// ROUTE PAGINA DEL SINGOLO PRODOTTO
 Route::get('/prodotti/show/{id}', function ($id) {
    // controlla se esiste elemento con indice $id, se esiste dunque il prodotto
    if (config("pasta.$id") == null) {
       abort(404);
-   } else {
-      $prodotto = config("pasta.$id");
-      //return view('prodotto-singolo', ["data" => $prodotto], "idNext => $id");
-      return view('prodotto-singolo', ["data" => $prodotto]);
    }
+   $prodotto = config("pasta.$id");
+   $prodotti = config("pasta");
+   $id_max = count($prodotti) - 1;
+   $id = ["idProd" => $id, "idMax" => $id_max];
+   //dd($id_max);
+   //return view('prodotto-singolo', ["data" => $prodotto], "idNext => $id");
+   return view('prodotto-singolo', ["data" => $prodotto], ["id" => $id]);
    // where controlla che $id sia numerico
-})->where('id', '[0-9]+')->name('dettaglio-prodotto');
+})->where('id', '[0-9]+')->name('prodotto-singolo');
 
 
 Route::get('/prodotti', function () {
